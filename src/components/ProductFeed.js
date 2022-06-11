@@ -1,9 +1,8 @@
-import React from 'react'
 import Product from './Product'
 
 function ProductFeed({ products }) {
   return (
-    <div className='md:-m-32 grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+    <div className='grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:-mt-32'>
       {products.slice(0,4).map(({id, title, description, price, image, category}) => (
         <Product 
         key={id}
@@ -12,6 +11,7 @@ function ProductFeed({ products }) {
         description={description}
         category={category}
         image={image}
+        price={price}
         />
       ))}
       <img className='md:col-span-full' src="images/ad banner.jpg" alt="" />
@@ -25,6 +25,7 @@ function ProductFeed({ products }) {
         description={description}
         category={category}
         image={image}
+        price={price}
         />
       ))}
         </div>
@@ -36,6 +37,7 @@ function ProductFeed({ products }) {
         description={description}
         category={category}
         image={image}
+        price={price}
         />
       ))}
 
